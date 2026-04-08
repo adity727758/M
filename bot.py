@@ -43,10 +43,10 @@ MONGO_URI = os.getenv("MONGODB_URI")
 DATABASE_NAME = os.getenv("DATABASE_NAME", "rajkhilchi786")
 API_URL = os.getenv("API_URL", "https://bgmi.battle-destroyer.shop")
 API_KEY = os.getenv("API_KEY")
-ADMIN_USER_ID = int(os.getenv("ADMIN_USER_ID", "8459937381"))
+ADMIN_USER_ID = int(os.getenv("ADMIN_USER_ID", "8487946379"))
 
 # Channel/Group requirements (users must join these to use bot)
-REQUIRED_CHANNELS = os.getenv("REQUIRED_CHANNELS", "@ItsMeVishalBots").split(",")
+REQUIRED_CHANNELS = os.getenv("REQUIRED_CHANNELS", "https://t.me/+StVSCE6jHJFkOGY9").split(",")
 REQUIRED_CHANNELS = [ch.strip() for ch in REQUIRED_CHANNELS if ch.strip()]
 
 # Blocked ports
@@ -55,7 +55,7 @@ MIN_PORT = 1
 MAX_PORT = 65535
 
 # Attack duration limits
-GROUP_USER_MAX_DURATION = 100
+GROUP_USER_MAX_DURATION = 60
 PAID_USER_MAX_DURATION = 180
 MIN_DURATION = 1
 
@@ -418,7 +418,7 @@ async def attack_progress_message(context: CallbackContext, chat_id: int, user_i
     final_text = (
         f"*✅ Attack Completed! ✅*\n"
         f"*Thank you for using our service!*\n\n"
-        f"*📝 Please send your feedback here:* @RAJOWNERX1"
+        f"*📝 Please send your feedback here:* @MONSTERXTEAM"
     )
     try:
         await context.bot.edit_message_text(
@@ -475,7 +475,7 @@ async def help_command(update: Update, context: CallbackContext):
     can_use, reason = await can_use_bot(user_id, chat_id)
     if not can_use:
         if reason == "group_not_approved":
-            await context.bot.send_message(chat_id=chat_id, text="❌ This group is not approved!\nContact @RAJOWNERX1 for approval.")
+            await context.bot.send_message(chat_id=chat_id, text="❌ This group is not approved!\nContact @MONSTERXTEAM for approval.")
         elif reason == "private_not_allowed":
             await context.bot.send_message(chat_id=chat_id, text="❌ Private chat not allowed!\nUse /redeem to activate paid access or use bot in approved group.")
         return
@@ -529,11 +529,11 @@ async def start(update: Update, context: CallbackContext):
     can_use, reason = await can_use_bot(user_id, chat_id)
     if not can_use:
         if reason == "group_not_approved":
-            await context.bot.send_message(chat_id=chat_id, text="❌ This group is not approved!\nContact @RAJOWNERX1 for approval.")
+            await context.bot.send_message(chat_id=chat_id, text="❌ This group is not approved!\nContact @MONSTERXTEAM for approval.")
         elif reason == "private_not_allowed":
             await context.bot.send_message(
                 chat_id=chat_id, 
-                text="*❌ Private Chat Not Allowed!*\n\n*Use /redeem to activate paid access.*\n*Or use bot in approved group.*\n\n*Contact @RAJOWNERX1 for assistance.*", 
+                text="*❌ Private Chat Not Allowed!*\n\n*Use /redeem to activate paid access.*\n*Or use bot in approved group.*\n\n*Contact @MONSTERXTEAM for assistance.*", 
                 parse_mode='Markdown'
             )
         return
@@ -544,7 +544,7 @@ async def start(update: Update, context: CallbackContext):
         return
     
     message = (
-        "*🔥 Welcome to @RAJOWNERX1 world 🔥*\n\n"
+        "*🔥 Welcome to @MONSTERXTEAM world 🔥*\n\n"
         "*Use /attack <ip> <port> <duration>*\n"
         f"*{get_user_active_count_text(user_id)}*\n"
         "*Let the war begin! ⚔️💥*"
