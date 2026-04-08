@@ -1,4 +1,4 @@
-BOT_TOKEN=8760406918:AAFizK1u-4uKMQfz0OrgIG9OKZxLhVuNWz0
+BOT_TOKEN=8146585403:AAFJYRvEErZ9NuZ9ufyf8cvXyWOzs0lIB4k
 MONGODB_URI=mongodb+srv://rajkhilchi786:F1uEyWGo9UTeqmTV@cluster0.bug4pqt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 DATABASE_NAME=rajkhilchi786
 API_URL=https://app.battle-destroyer.shop
